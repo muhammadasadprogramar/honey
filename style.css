@@ -158,12 +158,18 @@ a {
   font-family: ibm, staticB;
   line-height: 60px;
   width: 70%;
+  animation: leftMove 0.8s linear forwards;
+  animation-delay: 0.5;
+  transform: translateX(-600px);
 }
 
 #main > .home > .left > p {
   width: 76%;
   margin-top: 30px;
   letter-spacing: 2px;
+  animation: leftMove 1s linear forwards;
+  animation-delay: 1s;
+  transform: translateX(-600px);
 }
 
 #main > .home > .left > button {
@@ -179,6 +185,9 @@ a {
   border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;
   margin-top: 25px;
+  animation: leftMove 1s linear forwards;
+  animation-delay: 1.7s;
+  transform: translateX(-600px);
 }
 
 #main > .home > .left > button:hover {
@@ -196,8 +205,12 @@ a {
 #main > .home > .right > img {
   position: absolute;
   width: 280px;
-  right: 24%;
+  right: -60%;
   top: 5%;
+  animation-name: rightMove;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
 }
 
 #main > .home > #leaf1 {
@@ -205,80 +218,61 @@ a {
   width: 200px;
   top: 17%;
   left: 40%;
+  animation-name: opc;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.9s;
+  transform: scale(0.3);
 }
 #main > .home > #leaf2 {
   position: absolute;
   width: 90px;
-  top: 1%;
-  left: 4%;
+  bottom: 10%;
+  left: 40%;
   transform: rotate(60deg);
+  animation-name: long;
+  animation-duration: 3s;
+  animation-delay: 1.7s;
+  animation-fill-mode: forwards;
 }
 
-/* About Scetion */
-
-/* #main > .about {
-  width: 100%;
-  height: 82vh;
-  display: flex;
-  padding: 0 90px;
+@keyframes leftMove {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes rightMove {
+  from {
+    right: -60%;
+  }
+  to {
+    right: 10%;
+  }
 }
 
-#main > .about > .left {
-  width: 48%;
-  height: 100%;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  text-align: center;
-  background-color: #f99d1b;
+@keyframes opc {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-#main > .about > .left > img {
-  width: 400px;
+@keyframes long {
+  from {
+    left: 60%;
+    bottom: 10%;
+  }
+  to {
+    left: 4%;
+    bottom: 80%;
+  }
 }
-
-#main > .about > .right {
-  width: 52%;
-  height: 100%;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: column;
-  padding-left: 50px;
-}
-
-#main > .about > .right > h1 {
-  color: #a76718;
-  font-size: 42px;
-  font-weight: 700;
-  font-family: ibm, staticB;
-}
-
-#main > .about > .right > p {
-  margin-top: 30px;
-  letter-spacing: 2px;
-  color: #fff;
-  width: 95%;
-}
-
-
-#main > .about > .right > button {
-  padding: 9px 40px;
-  background-color: #f99d1b;
-  color: #f99d1b;
-  font-weight: 600;
-  border: none;
-  border: 2px solid #fff;
-  box-shadow: 0 0 5px #f99d1b;
-  cursor: pointer;
-  color: #fff;
-  border-top-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  margin-top: 25px;
-}
-
-#main > .about > .right > button:hover {
-  box-shadow: 0 0 50px #f99d1b, 0 0 50px #f99d1b, 0 0 100px #f99d1b;
-  background: transparent;
-  transform: 0.3s;
-} */
